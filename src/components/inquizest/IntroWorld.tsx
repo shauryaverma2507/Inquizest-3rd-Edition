@@ -93,8 +93,8 @@ export function IntroWorld() {
           <span><b className="block font-display text-[3vw] tracking-normal text-paper">02</b>systems</span>
         </div>
 
-        <div ref={reg(6)} className="pointer-events-none absolute right-[6vw] bottom-[10vh] font-mono text-[10px] uppercase tracking-[0.5em] text-paper/40">
-          scroll to rotate the mechanism
+        <div ref={reg(6)} className="pointer-events-none absolute right-[6vw] bottom-[10vh] font-mono text-[11px] uppercase tracking-[0.5em] text-paper/60">
+          keep scrolling to rotate the mechanism
         </div>
       </div>
     </section>

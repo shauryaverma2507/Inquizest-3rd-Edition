@@ -19,13 +19,13 @@ export const Route = createFileRoute("/")({
   component: Inquizest,
   head: () => ({
     meta: [
-      { title: "INQUIZEST 3.0 — Scroll the Universe" },
+      { title: "INQUIZEST 3rd Edition — Event Guide" },
       {
         name: "description",
         content:
-          "INQUIZEST 3.0: a cinematic, scroll-controlled universe of 26 events driven by two invisible radial mechanisms.",
+          "INQUIZEST 3rd Edition: explore 26 inter-school events at Delhi Public School Shaheedpath, Lucknow.",
       },
-      { property: "og:title", content: "INQUIZEST 3.0 — Scroll the Universe" },
+      { property: "og:title", content: "INQUIZEST 3rd Edition — Event Guide" },
       {
         property: "og:description",
         content:
@@ -56,7 +56,7 @@ function Inquizest() {
 
   return (
     <main className="relative bg-ink">
-      <h1 className="sr-only">INQUIZEST 3.0 — 26 events across two mechanisms</h1>
+      <h1 className="sr-only">INQUIZEST 3rd Edition — 26 events across two mechanisms</h1>
       <OpeningSequence />
       <IntroWorld />
       <RadialEventWorld id="wheel-a" events={EVENTS_A} config={WHEEL_A} />

@@ -25,7 +25,7 @@ export const WHEEL_A: WheelConfig = {
   focalY: 0.52,
   phi: 172,
   radius: 1.35,
-  step: 15,
+  step: -15,
   label: "system i",
 };
 
@@ -34,7 +34,7 @@ export const WHEEL_B: WheelConfig = {
   focalY: 0.46,
   phi: -8,
   radius: 1.35,
-  step: -15,
+  step: 15,
   label: "system ii",
 };
 
