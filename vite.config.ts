@@ -1,6 +1,3 @@
-// @lovable.dev/vite-tanstack-config already includes the required
-// TanStack Start, React, Tailwind, Nitro, etc. plugins.
-
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
@@ -11,7 +8,7 @@ export default defineConfig({
 
     prerender: {
       enabled: true,
-      crawlLinks: true,
+      crawlLinks: false,
       autoStaticPathsDiscovery: true,
       failOnError: true,
     },
