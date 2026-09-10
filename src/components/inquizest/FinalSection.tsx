@@ -1,6 +1,7 @@
 import { LogoMark } from "./LogoMark";
 import { ExternalLink } from "lucide-react";
-import brochureUrl from "@/assets/documents/inquizest-brochure.pdf?url";
+import brochureAsset from "@/assets/documents/inquizest-brochure.pdf.asset.json";
+const brochureUrl = brochureAsset.url;
 
 export function FinalSection() {
   return (
