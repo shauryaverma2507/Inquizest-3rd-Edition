@@ -90,7 +90,7 @@ export function IntroWorld() {
           </p>
         </div>
 
-        <div ref={reg(5)} className="absolute right-[7vw] top-[50vh] w-[min(34vw,420px)] max-md:hidden">
+        <div ref={reg(5)} className="absolute right-[7vw] top-[44vh] w-[min(34vw,420px)] max-md:hidden">
           <p className="text-[clamp(18px,1.5vw,24px)] font-bold leading-relaxed text-white px-2 py-1">
             A two-day inter-school collision of knowledge, performance, art,
             technology and nerve.
