@@ -1,4 +1,6 @@
 import { LogoMark } from "./LogoMark";
+import { ExternalLink } from "lucide-react";
+import brochureUrl from "@/assets/documents/inquizest-brochure.pdf?url";
 
 export function FinalSection() {
   return (
@@ -14,13 +16,23 @@ export function FinalSection() {
           Inter-school fest · 3rd edition
         </div>
       </div>
-      <div className="relative mt-[10vh] flex flex-wrap items-end justify-between gap-[4vh]">
-        <LogoMark tone="color" className="w-[min(46vw,520px)]" />
-        <p className="font-mono text-[10px] uppercase leading-loose tracking-[0.32em] text-paper/40">
-          Teacher-in-charge · Ms Firdaus Fatima Rizvi
-          <br />
-          +91 79069 68820 · dpsinquizest@gmail.com
-        </p>
+      <div className="relative mt-[8vh] grid gap-[5vh] lg:grid-cols-[minmax(300px,520px)_1fr] lg:items-end">
+        <LogoMark tone="color" className="w-full max-w-[520px]" />
+        <div className="lg:justify-self-end">
+          <div className="grid gap-x-8 gap-y-2 font-mono text-[10px] uppercase leading-loose tracking-[0.22em] text-paper/55 sm:grid-cols-2">
+            <p>Ms Firdaus Fatima Rizvi<br /><span className="text-paper/35">Teacher-in-Charge · </span><a href="tel:+917906968820" className="text-paper/75">+91 79069 68820</a></p>
+            <p>Ms Akanksha Singh<br /><span className="text-paper/35">Teacher-in-Charge · </span><a href="tel:+917376080931" className="text-paper/75">+91 73760 80931</a></p>
+            <p>Dishita Yadav<br /><span className="text-paper/35">Administrative Head · </span><a href="tel:+918853684701" className="text-paper/75">+91 88536 84701</a></p>
+            <p>Siddhi Singh<br /><span className="text-paper/35">Literary Director · </span><a href="tel:+919151697988" className="text-paper/75">+91 91516 97988</a></p>
+          </div>
+          <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3 font-mono text-[10px] uppercase tracking-[0.2em]">
+            <a href="mailto:dpsinquizest@gmail.com" className="text-paper/65 transition-colors hover:text-paper">dpsinquizest@gmail.com</a>
+            <a href="https://www.instagram.com/dps_inquizest/" target="_blank" rel="noreferrer" className="text-paper/65 transition-colors hover:text-paper">@dps_Inquizest</a>
+            <a href={brochureUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border border-paper/30 px-4 py-2.5 text-paper transition-colors hover:border-accent-yellow hover:text-accent-yellow">
+              More details · Brochure PDF <ExternalLink aria-hidden="true" className="size-3.5" />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

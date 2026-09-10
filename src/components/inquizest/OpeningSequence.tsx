@@ -137,13 +137,13 @@ export function OpeningSequence() {
               <LogoMark tone="ink" className="w-full" />
             </div>
             <div ref={chromaA} className="absolute inset-0 opacity-0 mix-blend-screen">
-              <LogoMark tone="color" className="w-full" style={{ filter: "hue-rotate(40deg)" }} />
+              <LogoMark tone="paper" className="w-full" />
             </div>
             <div ref={chromaB} className="absolute inset-0 opacity-0 mix-blend-screen">
-              <LogoMark tone="color" className="w-full" style={{ filter: "hue-rotate(-40deg)" }} />
+              <LogoMark tone="paper" className="w-full" />
             </div>
             <div ref={color} className="absolute inset-0 opacity-0">
-              <LogoMark tone="color" className="w-full" />
+              <LogoMark tone="paper" className="w-full" />
             </div>
           </div>
         </div>
@@ -158,9 +158,9 @@ export function OpeningSequence() {
 
         <div
           ref={hint}
-          className="absolute bottom-[8vh] left-1/2 -translate-x-1/2 font-mono text-[10px] uppercase tracking-[0.55em] text-paper/40"
+          className="absolute bottom-[8vh] left-1/2 -translate-x-1/2 font-mono text-[11px] uppercase tracking-[0.55em] text-paper/65"
         >
-          scroll
+          keep scrolling
         </div>
       </div>
     </section>

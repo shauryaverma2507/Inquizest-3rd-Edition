@@ -30,7 +30,7 @@ export function LogoMark({
       className={className}
       style={style}
       role="img"
-      aria-label="INQUIZEST 3.0"
+      aria-label="INQUIZEST 3rd Edition"
       shapeRendering="geometricPrecision"
     >
       <defs>
@@ -66,10 +66,12 @@ export function LogoMark({
         style={{
           fontFamily: "var(--font-mono)",
           fontSize: 40,
-          letterSpacing: "26px",
+          letterSpacing: "12px",
         }}
       >
-        3.0
+        <tspan>3</tspan>
+        <tspan fontSize="24" baselineShift="super">rd</tspan>
+        <tspan> EDITION</tspan>
       </text>
     </svg>
   );
