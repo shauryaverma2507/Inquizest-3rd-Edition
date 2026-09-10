@@ -62,38 +62,51 @@ export function IntroWorld() {
   };
 
   return (
-    <section ref={host} className="relative h-[205vh]" aria-label="Introduction">
+    <section ref={host} className="relative h-[285vh]" aria-label="Introduction">
       <div className="world-stage sticky top-0 h-screen w-full overflow-hidden bg-ink">
-        <div ref={reg(0)} className="halftone pointer-events-none absolute -inset-[8%] text-paper opacity-[0.06]" />
+        <div ref={reg(0)} className="halftone pointer-events-none absolute -inset-[8%] text-paper opacity-[0.12]" />
 
-        <div ref={reg(1)} className="pointer-events-none absolute left-[6vw] top-[16vh] h-[26vmin] w-[26vmin] rounded-full opacity-40 blur-3xl" style={{ background: "var(--accent-violet)" }} />
-        <div ref={reg(2)} className="pointer-events-none absolute right-[10vw] bottom-[14vh] h-[18vmin] w-[18vmin] opacity-30 blur-2xl" style={{ background: "var(--accent-orange)" }} />
+        <div ref={reg(1)} className="pointer-events-none absolute left-[6vw] top-[14vh] h-[26vmin] w-[26vmin] rounded-full opacity-60 blur-3xl" style={{ background: "var(--accent-violet)" }} />
+        <div ref={reg(2)} className="pointer-events-none absolute right-[10vw] bottom-[14vh] h-[18vmin] w-[18vmin] opacity-50 blur-2xl" style={{ background: "var(--accent-orange)" }} />
 
-        <div ref={reg(3)} className="absolute left-[6vw] top-[22vh] max-w-[52vw]">
-          <p className="font-mono text-[10px] uppercase tracking-[0.5em] text-paper/50">what is inquizest</p>
-          <h2 className="mt-[2vh] font-display text-[9vw] leading-[0.84] tracking-[-0.02em] text-paper md:text-[6vw]">
+        <div ref={reg(3)} className="absolute left-[6vw] top-[14vh] max-w-[58vw]">
+          <p className="font-mono text-[11px] uppercase tracking-[0.5em] text-paper/80">what is inquizest</p>
+          <h2 className="mt-[2vh] font-display text-[8vw] leading-[0.84] tracking-[-0.02em] text-paper md:text-[5.5vw]">
             A UNIVERSE
             <br />
             BUILT FROM
             <br />
-            <span style={{ WebkitTextStroke: "1.5px var(--accent-yellow)", color: "transparent" }}>QUESTIONS</span>
+            <span style={{ color: "var(--accent-yellow)" }}>QUESTIONS</span>
           </h2>
         </div>
 
-        <div ref={reg(4)} className="absolute right-[7vw] top-[30vh] w-[min(30vw,360px)] max-md:hidden">
-          <p className="text-[clamp(13px,1.1vw,18px)] leading-relaxed text-paper/60">
-            A two-day inter-school collision of knowledge, performance, art,
-            technology and nerve at Delhi Public School Shaheedpath, Lucknow.
+        <div ref={reg(4)} className="absolute right-[7vw] top-[16vh] w-[min(34vw,420px)] max-md:hidden">
+          <p className="font-mono text-[11px] uppercase tracking-[0.4em] text-paper/80">the host school</p>
+          <p className="mt-[1.5vh] text-[clamp(14px,1.15vw,19px)] leading-relaxed text-paper/90">
+            Delhi Public School Shaheedpath, Lucknow, is a centre of learning
+            where curiosity is cultivated and ambition is challenged. For the
+            third edition of INQUIZEST, it opens its doors to schools across the
+            region for a celebration of intellect, imagination and spirit.
           </p>
         </div>
 
-        <div ref={reg(5)} className="absolute bottom-[12vh] left-[6vw] flex flex-wrap items-end gap-[4vw] font-mono text-[10px] uppercase tracking-[0.4em] text-paper/45">
+        <div ref={reg(5)} className="absolute right-[7vw] top-[44vh] w-[min(34vw,420px)] max-md:hidden">
+          <p className="text-[clamp(14px,1.15vw,19px)] leading-relaxed text-paper/85">
+            A two-day inter-school collision of knowledge, performance, art,
+            technology and nerve — twenty-six events across two parallel
+            mechanisms, where every round is a question and every answer is a
+            doorway.
+          </p>
+        </div>
+
+        <div ref={reg(6)} className="absolute bottom-[14vh] left-[6vw] flex flex-wrap items-end gap-[4vw] font-mono text-[11px] uppercase tracking-[0.4em] text-paper/75">
           <span><b className="block font-display text-[3vw] tracking-normal text-paper">26</b>events</span>
           <span><b className="block font-display text-[3vw] tracking-normal text-paper">02</b>days</span>
           <span><b className="block font-display text-[3vw] tracking-normal text-paper">02</b>systems</span>
+          <span><b className="block font-display text-[3vw] tracking-normal text-paper">5–6</b>oct 2026</span>
         </div>
 
-        <div ref={reg(6)} className="pointer-events-none absolute right-[6vw] bottom-[10vh] font-mono text-[11px] uppercase tracking-[0.5em] text-paper/60">
+        <div ref={reg(7)} className="pointer-events-none absolute right-[6vw] bottom-[10vh] font-mono text-[11px] uppercase tracking-[0.5em] text-paper/80">
           scroll to rotate the mechanism
         </div>
       </div>
