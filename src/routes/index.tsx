@@ -1,24 +1,68 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lenis from "lenis";
+import { OpeningSequence } from "@/components/inquizest/OpeningSequence";
+import { IntroWorld } from "@/components/inquizest/IntroWorld";
+import { EventTransition } from "@/components/inquizest/EventTransition";
+import {
+  RadialEventWorld,
+  WHEEL_A,
+  WHEEL_B,
+} from "@/components/inquizest/RadialEventWorld";
+import { FinalSection } from "@/components/inquizest/FinalSection";
+import { WHEEL_A as EVENTS_A, WHEEL_B as EVENTS_B } from "@/data/events";
+import { prefersReducedMotion } from "@/lib/anim";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  component: Inquizest,
+  head: () => ({
+    meta: [
+      { title: "INQUIZEST 3.0 — Scroll the Universe" },
+      {
+        name: "description",
+        content:
+          "INQUIZEST 3.0: a cinematic, scroll-controlled universe of 26 events driven by two invisible radial mechanisms.",
+      },
+      { property: "og:title", content: "INQUIZEST 3.0 — Scroll the Universe" },
+      {
+        property: "og:description",
+        content:
+          "Scroll becomes the control input: black collapses into light, the logo is revealed from nothing, then 26 events rotate through an invisible mechanism.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Inquizest() {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    if (prefersReducedMotion()) return;
+
+    const lenis = new Lenis({ duration: 0.92, wheelMultiplier: 1.08 });
+    lenis.on("scroll", ScrollTrigger.update);
+    const tick = (time: number) => lenis.raf(time * 1000);
+    gsap.ticker.add(tick);
+    gsap.ticker.lagSmoothing(0);
+
+    return () => {
+      gsap.ticker.remove(tick);
+      lenis.destroy();
+    };
+  }, []);
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="relative bg-ink">
+      <h1 className="sr-only">INQUIZEST 3.0 — 26 events across two mechanisms</h1>
+      <OpeningSequence />
+      <IntroWorld />
+      <RadialEventWorld id="wheel-a" events={EVENTS_A} config={WHEEL_A} />
+      <EventTransition />
+      <RadialEventWorld id="wheel-b" events={EVENTS_B} config={WHEEL_B} />
+      <FinalSection />
+    </main>
   );
 }
