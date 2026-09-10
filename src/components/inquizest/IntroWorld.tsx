@@ -114,4 +114,4 @@ export function IntroWorld() {
   );
 }
 
-const DEPTHS = [0.2, 1.4, 1.1, 0.5, 0.85, 0.65, 0.35];
+const DEPTHS = [0.2, 1.4, 1.1, 0.5, 0.85, 0.65, 0.45, 0.35];
