@@ -233,41 +233,41 @@ function EventComposition({ event }: { event: EventEntry }) {
           {event.title}
         </h2>
 
-        {/* the original brochure page for this event */}
-        <figure
-          className="relative mt-[2.2vh] overflow-hidden border border-paper/15 bg-ink/60"
-          style={{
-            boxShadow: `0 24px 60px -30px ${accent}`,
-            transform: "rotate(-0.6deg)",
-          }}
-        >
-          <img
-            src={event.plate}
-            alt={`${event.title} — ${event.kind} details from the INQUIZEST brochure`}
-            loading="lazy"
-            decoding="async"
-            width={827}
-            height={582}
-            className="block w-full opacity-[0.94]"
-          />
-          <span
-            className="pointer-events-none absolute inset-0"
-            style={{ boxShadow: `inset 0 0 0 1px ${accent}33` }}
-          />
-          <figcaption className="pointer-events-none absolute bottom-0 right-0 bg-ink/80 px-2 py-1 font-mono text-[8px] uppercase tracking-[0.3em] text-paper/60">
-            brochure · plate {event.index}
-          </figcaption>
-        </figure>
+        <div className="mt-[2.4vh] flex items-start gap-[1.6vw] max-md:flex-col max-md:gap-[2vh]">
+          {/* the event's own image, lifted from the brochure */}
+          <figure
+            className="relative shrink-0 overflow-hidden bg-ink/60 max-md:w-[54%]"
+            style={{
+              width: "clamp(140px, 15vw, 230px)",
+              boxShadow: `0 26px 60px -34px ${accent}`,
+              transform: "rotate(-1deg)",
+            }}
+          >
+            <img
+              src={event.plate}
+              alt={`${event.title} — ${event.kind.toLowerCase()} at INQUIZEST`}
+              loading="lazy"
+              decoding="async"
+              width={640}
+              height={650}
+              className="block aspect-square w-full object-cover"
+            />
+            <span
+              className="pointer-events-none absolute inset-0"
+              style={{ boxShadow: `inset 0 0 0 1px ${accent}` }}
+            />
+          </figure>
 
-        <div className="mt-[2vh] flex max-w-[34ch] flex-col gap-[1.6vh]">
-          <p className="text-[clamp(13px,1.05vw,17px)] leading-relaxed text-paper/60">{event.blurb}</p>
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[10px] uppercase tracking-[0.24em] text-paper/45">
-            <span>{event.when}</span>
-            <span>{event.where}</span>
-          </div>
-          <div className="flex w-fit divide-x divide-paper/20 border-y border-paper/20 font-mono text-[9px] uppercase tracking-[0.24em] text-paper/65">
-            <span className="py-2 pr-4">classes {event.classes}</span>
-            <span className="py-2 pl-4">{event.participants} participant{event.participants === "1" ? "" : "s"}</span>
+          <div className="flex max-w-[34ch] flex-col gap-[1.6vh]">
+            <p className="text-[clamp(13px,1.05vw,17px)] leading-relaxed text-paper/60">{event.blurb}</p>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[10px] uppercase tracking-[0.24em] text-paper/45">
+              <span>{event.when}</span>
+              <span>{event.where}</span>
+            </div>
+            <div className="flex w-fit divide-x divide-paper/20 border-y border-paper/20 font-mono text-[9px] uppercase tracking-[0.24em] text-paper/65">
+              <span className="py-2 pr-4">classes {event.classes}</span>
+              <span className="py-2 pl-4">{event.participants} participant{event.participants === "1" ? "" : "s"}</span>
+            </div>
           </div>
         </div>
       </div>
