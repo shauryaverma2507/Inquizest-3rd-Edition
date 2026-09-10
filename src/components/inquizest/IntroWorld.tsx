@@ -94,7 +94,7 @@ export function IntroWorld() {
         </div>
 
         <div ref={reg(6)} className="pointer-events-none absolute right-[6vw] bottom-[10vh] font-mono text-[11px] uppercase tracking-[0.5em] text-paper/60">
-          keep scrolling to rotate the mechanism
+          scroll to rotate the mechanism
         </div>
       </div>
     </section>
