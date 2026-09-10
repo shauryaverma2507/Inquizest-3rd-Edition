@@ -1,16 +1,22 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  vite: {
+    base: "/Inquizest/",
+  },
+
   tanstackStart: {
     server: {
       entry: "server",
     },
 
-    prerender: {
+    spa: {
       enabled: true,
-      crawlLinks: false,
-      autoStaticPathsDiscovery: true,
-      failOnError: true,
+
+      prerender: {
+        outputPath: "index.html",
+        crawlLinks: true,
+      },
     },
   },
 });
