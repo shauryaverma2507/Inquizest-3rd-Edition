@@ -45,16 +45,11 @@ jobs:
             cp site/_shell.html site/index.html
           fi
 
-          if [ ! -f "site/index.html" ]; then
-            echo "ERROR: _shell.html was not generated."
-            echo "Contents of .output/public:"
-            find .output/public -maxdepth 3 -type f -print
-            exit 1
-          fi
+          test -f site/index.html
 
           cp site/index.html site/404.html
 
-          echo "GitHub Pages site:"
+          echo "Final site:"
           find site -maxdepth 3 -type f -print
 
       - name: Setup Pages
