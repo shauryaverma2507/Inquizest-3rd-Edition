@@ -82,7 +82,7 @@ export function IntroWorld() {
 
         <div ref={reg(4)} className="absolute right-[7vw] top-[16vh] w-[min(34vw,420px)] max-md:hidden">
           <p className="font-mono text-[11px] uppercase tracking-[0.4em] text-paper/80">the host school</p>
-          <p className="text-[clamp(14px,1.3vw,21px)] leading-relaxed text-paper/85 text-black px-2 py-1">
+          <p className="text-[clamp(18px,1.5vw,24px)] font-bold leading-relaxed text-black px-2 py-1">
             Delhi Public School Shaheedpath, Lucknow, is a centre of learning
             where curiosity is cultivated and ambition is challenged. For the
             third edition of INQUIZEST, it opens its doors to schools across the
@@ -91,7 +91,7 @@ export function IntroWorld() {
         </div>
 
         <div ref={reg(5)} className="absolute right-[7vw] top-[44vh] w-[min(34vw,420px)] max-md:hidden">
-          <p className="text-[clamp(14px,1.3vw,21px)] leading-relaxed text-paper/85 text-black px-2 py-1">
+          <p className="text-[clamp(18px,1.5vw,24px)] font-bold leading-relaxed text-black px-2 py-1">
             A two-day inter-school collision of knowledge, performance, art,
             technology and nerve — twenty-six events across two parallel
             mechanisms, where every round is a question and every answer is a
