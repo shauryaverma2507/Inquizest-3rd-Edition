@@ -97,7 +97,7 @@ export function IntroWorld() {
           </p>
         </div>
 
-        <div ref={reg(6)} className="absolute bottom-[14vh] left-[6vw] flex flex-wrap items-end gap-[4vw] font-mono text-[11px] uppercase tracking-[0.4em] text-paper/75">
+        <div ref={reg(6)} className="absolute bottom-[14vh] left-[6vw] flex flex-wrap items-end gap-[4vw] font-mono text-[11px] uppercase tracking-[0.4em] text-paper/75 font-bold leading-relaxed text-black px-2 py-1">
           <span><b className="block font-display text-[3vw] tracking-normal text-paper">26</b>events</span>
           <span><b className="block font-display text-[3vw] tracking-normal text-paper">02</b>days</span>
           <span><b className="block font-display text-[3vw] tracking-normal text-paper">02</b>systems</span>
