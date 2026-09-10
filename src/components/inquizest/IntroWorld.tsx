@@ -93,9 +93,7 @@ export function IntroWorld() {
         <div ref={reg(5)} className="absolute right-[7vw] top-[44vh] w-[min(34vw,420px)] max-md:hidden">
           <p className="text-[clamp(18px,1.5vw,24px)] font-bold leading-relaxed text-white px-2 py-1">
             A two-day inter-school collision of knowledge, performance, art,
-            technology and nerve — twenty-six events across two parallel
-            mechanisms, where every round is a question and every answer is a
-            doorway.
+            technology and nerve.
           </p>
         </div>
 
