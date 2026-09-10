@@ -97,11 +97,11 @@ export function IntroWorld() {
           </p>
         </div>
 
-        <div ref={reg(6)} className="font-bold leading-relaxed text-black px-2 py-1 absolute bottom-[14vh] left-[6vw] flex flex-wrap items-end gap-[4vw] font-mono text-[15px] font-bold uppercase tracking-[0.4em] text-paper/75">
-          <span><b className="block font-display text-[3vw] tracking-normal text-paper font-bold leading-relaxed text-black px-2 py-1">26</b>events</span>
-          <span><b className="block font-display text-[3vw] tracking-normal text-paper font-bold leading-relaxed text-black px-2 py-1">02</b>days</span>
-          <span><b className="block font-display text-[3vw] tracking-normal text-paper font-bold leading-relaxed text-black px-2 py-1">02</b>systems</span>
-          <span><b className="block font-display text-[3vw] tracking-normal text-paper font-bold leading-relaxed text-black px-2 py-1">5–6</b>oct 2026</span>
+        <div ref={reg(6)} className="font-bold leading-relaxed text-black px-2 py-1 absolute bottom-[14vh] left-[6vw] flex flex-wrap items-end gap-[4vw] font-mono text-[15px] font-bold uppercase tracking-[0.4em] text-white">
+          <span><b className="block font-display text-[3vw] tracking-normal text-white font-bold leading-relaxed text-black px-2 py-1">26</b>events</span>
+          <span><b className="block font-display text-[3vw] tracking-normal text-white font-bold leading-relaxed text-black px-2 py-1">02</b>days</span>
+          <span><b className="block font-display text-[3vw] tracking-normal text-white font-bold leading-relaxed text-black px-2 py-1">02</b>systems</span>
+          <span><b className="block font-display text-[3vw] tracking-normal text-white font-bold leading-relaxed text-black px-2 py-1">5–6</b>oct 2026</span>
         </div>
 
         <div ref={reg(7)} className="pointer-events-none absolute right-[6vw] bottom-[10vh] font-mono text-[11px] uppercase tracking-[0.5em] text-paper/80">
