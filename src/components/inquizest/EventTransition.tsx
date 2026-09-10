@@ -54,7 +54,6 @@ export function EventTransition() {
         <div className="absolute inset-0 grid place-items-center px-[6vw] text-center">
           <div>
             <div ref={wordA} className="font-display text-[7vw] leading-[0.9] text-paper md:text-[4.4vw]">
-              DAY 0 + DAY 1 · COMPLETE
             </div>
             <div ref={wordB} className="mt-[2vh] font-display text-[9vw] leading-[0.88] text-transparent opacity-0 md:text-[5.6vw]" style={{ WebkitTextStroke: "1.6px var(--accent-lime)" }}>
               DAY 2 MECHANISM ENGAGED
