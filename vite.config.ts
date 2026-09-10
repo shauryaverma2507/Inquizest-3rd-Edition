@@ -2,7 +2,7 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   vite: {
-    base: "/Inquizest/",
+    base: "/Inquizest-3rd-Edition/",
   },
 
   tanstackStart: {
@@ -12,10 +12,9 @@ export default defineConfig({
 
     spa: {
       enabled: true,
-
       prerender: {
         outputPath: "index.html",
-        crawlLinks: true,
+        crawlLinks: false,
       },
     },
   },
