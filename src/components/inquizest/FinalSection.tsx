@@ -1,5 +1,6 @@
 import { LogoMark } from "./LogoMark";
 import { ExternalLink } from "lucide-react";
+import brochureUrl from "@/assets/documents/inquizest-brochure.pdf?url";
 
 export function FinalSection() {
   return (
@@ -27,7 +28,7 @@ export function FinalSection() {
           <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3 font-mono text-[10px] uppercase tracking-[0.2em]">
             <a href="mailto:dpsinquizest@gmail.com" className="text-paper/65 transition-colors hover:text-paper">dpsinquizest@gmail.com</a>
             <a href="https://www.instagram.com/dps_inquizest/" target="_blank" rel="noreferrer" className="text-paper/65 transition-colors hover:text-paper">@dps_Inquizest</a>
-            <a href="/brochure.pdf" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border border-paper/30 px-4 py-2.5 text-paper transition-colors hover:border-accent-yellow hover:text-accent-yellow">
+            <a href={brochureUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border border-paper/30 px-4 py-2.5 text-paper transition-colors hover:border-accent-yellow hover:text-accent-yellow">
               More details · Brochure PDF <ExternalLink aria-hidden="true" className="size-3.5" />
             </a>
           </div>
