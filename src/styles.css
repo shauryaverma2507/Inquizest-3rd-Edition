@@ -22,6 +22,9 @@
   --font-display: "Anton", "Archivo Black", system-ui, sans-serif;
   --font-body: "Space Grotesk", system-ui, sans-serif;
   --font-mono: "Space Mono", ui-monospace, monospace;
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --color-school-green: var(--school-green);
+  --color-school-green-bright: var(--school-green-bright);
   --color-ink: var(--ink);
   --color-paper: var(--paper);
   --color-accent-red: var(--accent-red);
@@ -85,6 +88,8 @@
   --accent-cyan: oklch(0.79 0.14 205);
   --accent-violet: oklch(0.58 0.24 300);
   --radius: 0.625rem;
+  --school-green: oklch(0.45 0.13 152);
+  --school-green-bright: oklch(0.74 0.19 150);
 
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
