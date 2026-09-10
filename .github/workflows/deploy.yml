@@ -1,9 +1,10 @@
-name: Deploy to GitHub Pages
+name: Deploy INQUIZEST to GitHub Pages
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -11,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: github-pages
+  group: pages
   cancel-in-progress: true
 
 jobs:
@@ -20,28 +21,49 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
 
       - name: Install dependencies
-        run: npm install
+        run: bun install --frozen-lockfile
 
       - name: Build
-        run: npm run build
+        run: bun run build
 
-      - name: Show output
+      - name: Prepare GitHub Pages
         run: |
-          echo "=== Generated files ==="
-          find .output/public -type f | sort
+          set -e
+
+          rm -rf site
+          mkdir -p site
+
+          cp -R .output/public/. site/
+
+          if [ -f "site/_shell.html" ]; then
+            cp site/_shell.html site/index.html
+          fi
+
+          if [ ! -f "site/index.html" ]; then
+            echo "ERROR: _shell.html was not generated."
+            echo "Contents of .output/public:"
+            find .output/public -maxdepth 3 -type f -print
+            exit 1
+          fi
+
+          cp site/index.html site/404.html
+
+          echo "GitHub Pages site:"
+          find site -maxdepth 3 -type f -print
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: ./.output/public
+          path: ./site
 
   deploy:
     needs: build
@@ -52,6 +74,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
